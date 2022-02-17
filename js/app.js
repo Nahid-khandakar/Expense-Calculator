@@ -8,6 +8,7 @@ function getInput(costId) {
     }
     else {
         alert('Make Sure You didnot Give Negative Number or String ');
+        productInput.value = '';
     }
 
 }
