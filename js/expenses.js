@@ -7,11 +7,12 @@ function getInput(costId) {
         return productCost;
     }
     else {
-        alert('Make Sure You didnot Give any Number or String');
+        alert('Make Sure You didnot Give Negative Number or String ');
     }
 
 }
 
+//calculation total Expenses and Balance
 function calculateCost() {
 
     const incomeAmount = getInput('income-input');
@@ -36,26 +37,21 @@ function calculateCost() {
 
 }
 
+//Calculate Button clicked 
 document.getElementById('calculate-btn').addEventListener('click', function () {
 
     calculateCost();
-
 })
 
+//Save Button Clicked
 document.getElementById('save-btn').addEventListener('click', function () {
 
-    //1-saving input  2-save diplay  3-income value  4-percetag 5-save display change
-
     const saveMoney = getInput('save-money')
-    // const displaySaveAmount = document.getElementById('save-display');
-    //income input and its value
     const incomeAmount = getInput('income-input')
     const savingAmount = (incomeAmount / 100) * saveMoney;
     const totalBalance = calculateCost();
 
     if (totalBalance > savingAmount) {
-
-
         const displaySaveAmount = document.getElementById('save-display');
         displaySaveAmount.innerText = savingAmount;
         const remaingingBalance = totalBalance - savingAmount;
@@ -65,7 +61,6 @@ document.getElementById('save-btn').addEventListener('click', function () {
     }
     else {
         const errorWarn = document.getElementById('error-warn');
-        errorWarn.innerText = 'Not Enough Balance/Wrong Input For Saving';
+        errorWarn.innerText = 'Not Enough Balance/Wrong Input';
     }
-
 })
