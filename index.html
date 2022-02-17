@@ -17,7 +17,7 @@
 <body>
     <!-- Header Section -->
     <header>
-        <h1 class="text-center my-3">EXPENSES CALCULATOR</h1>
+        <h1 class="text-center text-danger my-3">EXPENSES CALCULATOR</h1>
     </header>
 
     <!-- Main Section -->
@@ -70,7 +70,8 @@
 
 
                             <!-- calculate button -->
-                            <button id="calculate-btn" type="button" class="btn btn-dark btn-lg mb-2">Calculate</button>
+                            <button id="calculate-btn" type="button"
+                                class="btn btn-success btn-lg mb-2">Calculate</button>
 
                             <h4>Total Expenses : <span id="expense-amount">0</span> </h4>
                             <h4>Balance : <span id="balance-amount">0</span> </h4>
@@ -82,16 +83,16 @@
                                 <input id="save-money" type="text" class="form-control someInput  "
                                     placeholder="Save Some Money" aria-describedby="basic-addon1">
 
-                                <span class="mx-3"> % </span>
-
-                                <button id="save-btn" type="button" class="btn btn-dark btn-sm"> Save</button>
+                                <span class="mx-2"> % </span>
+                                <button id="save-btn" type="button" class="btn btn-success btn-md me-3"> Save</button>
                             </div>
 
                             <!-- final calculation  -->
 
                             <h4>Saving Amount : <span id="save-display">0</span></h4>
                             <h4>Remaining Balance : <span id="remaining-amount">0</span> </h4>
-                            <p id="error-warn" class=" bg-danger text-white rounded py-3 change-color ">No Error
+                            <p id="error-warn" class=" bg-danger text-white rounded py-2 change-color ">
+                                <span>&#10003;</span> No Error . Everything OK
                             </p>
 
                         </div>

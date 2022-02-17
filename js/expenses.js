@@ -1,16 +1,13 @@
 function getInput(costId) {
 
     const productInput = document.getElementById(costId);
-    const productText = productInput.value;
-    const productCost = parseFloat(productText.value);
+    const productCost = parseFloat(productInput.value);
 
     if (!isNaN(productCost) && productCost > -1) {
-
         return productCost;
     }
     else {
-        alert('positve number');
-
+        alert('Make Sure You didnot Give any Number or String');
     }
 
 }
@@ -34,7 +31,7 @@ function calculateCost() {
     }
     else {
         const errorWarn = document.getElementById('error-warn');
-        errorWarn.innerText = 'Expense is greather then or equal to Income';
+        errorWarn.innerText = 'There is a problem in Income and Expense / Wrong Input';
     }
 
 }
@@ -64,13 +61,11 @@ document.getElementById('save-btn').addEventListener('click', function () {
         const remaingingBalance = totalBalance - savingAmount;
         const remaingingInput = document.getElementById('remaining-amount');
         remaingingInput.innerText = remaingingBalance;
+
     }
     else {
         const errorWarn = document.getElementById('error-warn');
-        errorWarn.innerText = 'Not enough money for savings';
+        errorWarn.innerText = 'Not Enough Balance/Wrong Input For Saving';
     }
-
-
-
 
 })
